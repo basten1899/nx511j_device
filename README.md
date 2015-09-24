@@ -1,2 +1,2 @@
 # nubia_z9mini
-source of nubia_z9mini like kernel,device and vendor
+nubia_z9mini device extract from boot.img
