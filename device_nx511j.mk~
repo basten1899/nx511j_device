@@ -9,9 +9,9 @@ DEVICE_PATH := device/zte/nx511j
 
 DEVICE_PACKAGE_OVERLAYS += device/zte/nx511j/overlay
 
-PRODUCTY_COPY_FILES += \
-    device/zte/nx511j/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
-    device/zte/nx511j/root/fstab.qcom:recovery/root/fstab.qcom \
+#PRODUCTY_COPY_FILES += \
+#    device/zte/nx511j/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
+#    device/zte/nx511j/root/fstab.qcom:recovery/root/fstab.qcom \
 
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -26,6 +26,8 @@ endif
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/kernel:kernel \
     $(DEVICE_PATH)/dt.img:dt.img \
+#    $(DEVICE_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
+#    $(DEVICE_PATH)/fstab.qcom:recovery/root/fstab.qcom \
 
 $(call inherit-product, build/target/product/full.mk)
 
